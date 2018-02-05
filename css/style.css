@@ -1,0 +1,213 @@
+/**********************************************
+*** GENERAL
+**********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    color: #555;
+    font-family: Open Sans;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400
+}
+
+.right { float: right; }
+
+/**********************************************
+*** TOP
+**********************************************/
+
+.top {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(grocery.jpg);
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.display {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.display__title {
+    font-weight: 600;
+    font-size: 46px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.display__description {
+    font-weight: 100;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/**********************************************
+*** BOTTOM
+**********************************************/
+
+/**** FORM ****/
+.add {
+    padding: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+}
+
+.add__container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add__type,
+.add__list,
+.add__description {
+    height: 44px;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: #fff;
+    margin-right: 10px;
+    transition: border 0.3s;
+}
+
+.add__type { width: 100px; }
+.add__list { width: 120px; }
+.add__description {
+    width: 400px;
+    padding: 12px 15px;
+}
+
+.add__btn {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #28B9B5;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.add__btn:active { transform: translateY(2px); }
+
+.add__type:focus,
+.add__list:focus,
+.add__description:focus {
+    outline: none;
+    border: 1px solid #28B9B5;
+}
+
+.add__btn:focus { outline: none; }
+
+.add__list {
+    display: none;
+}
+
+.add__list.active {
+    display: inline-block;
+}
+
+/**** LISTS ****/
+.container {
+    width: 1000px;
+    margin: 60px auto;
+}
+
+.ingredients,
+.shopping,
+.inventory {
+    float: left;
+    width: 300px;
+}
+
+.ingredients,
+.shopping {
+    margin-right: 50px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.ingredients__title { color: #28B9B5; }
+.shopping__title { color: #FF5049; }
+.inventory__title { color: #3498db; }
+
+.meal {
+    padding: 5px;
+    background-color: #28B9B5;
+    color: #fff;
+}
+
+.meal__title {
+    float: left;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+}
+
+.item {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.item:first-child {
+    border-top: 1px solid #e7e7e7;
+}
+
+/* .item:nth-child(even) { background-color: #f7f7f7; } */
+
+.item__description {
+    float:left;
+    transition: transform 0.2s;
+}
+
+.item__delete--btn {
+    background: none;
+    border: none;
+    vertical-align: middle;
+    line-height: 1;
+    cursor: pointer;
+    display: none;
+}
+
+.item__delete--btn:focus { outline: none; }
+.item__delete--btn:active { transform: translateY(2px); }
+
+.item .item__delete--btn {
+    color: #28B9B5;
+    font-size: 22px;
+}
+
+.meal .item__delete--btn {
+    color: #fff;
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+.ingredients__list .item:hover .item__description { transform: translateX(-10px); }
+.ingredients__list .meal:hover .meal__title { transform: translateX(-2px); }
+
+.ingredients__list .item:hover .item__delete--btn,
+.ingredients__list .meal:hover .item__delete--btn { display: block; }

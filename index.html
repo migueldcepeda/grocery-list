@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+        <title>Grocery List</title>
+    </head>
+    <body>
+
+        <div class="top">
+            <div class="display">
+                <div class="display__title">
+                    Grocery List
+                </div>
+                <div class="display__description">
+                    <!-- Food shopping made easier -->
+                    What do I need from the supermarket?
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <div class="add">
+                <div class="add__container">
+                    <select class="add__type">
+                        <option value="ing" selected>Food Item</option>
+                        <option value="meal">Meal Name</option>
+                    </select>
+                    <select class="add__list active">
+                        <option value="shopping">Shopping List</option>
+                        <option value="inventory">Inventory</option>
+                    </select>
+                    <input type="text" class="add__description" placeholder="Add item">
+                    <button class="add__btn"><i class="ion-ios-plus-outline"></i></button>
+                </div>
+            </div>
+
+            <div class="container clearfix">
+                <!-- Ingredients -->
+                <div class="ingredients">
+                    <h2 class="ingredients__title">Ingredients</h2>
+                    <div class="ingredients__list">
+
+                        <!-- Meal Item -->
+                        <!-- <div class="meal clearfix" id="meal-1">
+                            <div class="meal__title">Pizza</div>
+                            <div class="right">
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Ingredient Item -->
+                        <!-- <div class="item clearfix" id="ing-1">
+                            <div class="item__description">Mozzarella</div>
+                            <div class="right">
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item clearfix" id="ing-2">
+                            <div class="item__description">Dough</div>
+                            <div class="right clearfix">
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item clearfix" id="ing-3">
+                            <div class="item__description">Sauce</div>
+                            <div class="right clearfix">
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+                <!-- /Ingredients -->
+
+                <!-- Shopping List -->
+                <div class="shopping">
+                    <h2 class="shopping__title">Shopping List</h2>
+                    <div class="shopping__list">
+
+                        <!-- <div class="item clearfix" id="shopping-1">
+                            <div class="item__description">Mozzarella</div>
+                        </div>
+
+                        <div class="item clearfix" id="shopping-1">
+                            <div class="item__description">Dough</div>
+                        </div> -->
+
+                    </div>
+                </div>
+                <!-- /Shopping List -->
+
+                <!-- Inventory -->
+                <div class="inventory">
+                    <h2 class="inventory__title">Inventory</h2>
+                    <div class="inventory__list">
+
+                        <!-- <div class="item clearfix" id="inventory-1">
+                            <div class="item__description">Sauce</div>
+                        </div> -->
+
+                    </div>
+                </div>
+                <!-- /Inventory -->
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src = "http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="js/sortItems.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
